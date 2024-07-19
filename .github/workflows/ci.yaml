@@ -10,4 +10,4 @@ jobs:
         - name: Check out repository code
           uses: actions/checkout@v2
         - name: Hello User
-          uses: echo "welcome to Github Actions"
+          run: echo "welcome to Github Actions"
