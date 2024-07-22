@@ -1,13 +1,14 @@
-name: class-test
+name: CI
 on:
   push:
     branches:
-      - master
+      - JavaScript
 jobs:
-    Hello-User:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Check out repository code
-          uses: actions/checkout@v2
-        - name: Hello User
-          run: echo "welcome to Github Actions"
+ build:
+   runs-on: ubuntu-latest
+   steps:
+     - uses: actions/checkout@v1
+     - name: Install Dependencies
+       run: npm install
+     - name: Run Tests
+       run: npm test
